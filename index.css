@@ -1,0 +1,1074 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Gradient background for the main container */
+.gradient-bg {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar styling */
+.navbar-brand .logo {
+  width: 40px;
+  height: auto;
+}
+
+.nav-link {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #63f3e7;
+}
+
+/* Navbar - Adjust for smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand .logo {
+    width: 30px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+/* Hero section styling */
+.hero-section {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: textColorChange 3s infinite;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.hero-section .credit-card-image {
+  width: 400px;
+  margin: 10px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Adjustments for tablet and mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero-section .credit-card-image {
+    width: 300px;
+  }
+
+  .animate-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .hero-section .credit-card-image {
+    width: 250px;
+  }
+
+  .animate-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Animations */
+.animate-text {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover and animation */
+.animate-btn {
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.animate-btn:hover {
+  background-color: #63f3e7;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* Credit Card Image styling */
+.credit-card-image {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Heading animation */
+@keyframes textColorChange {
+  0%,
+  100% {
+    color: #ffffff;
+  }
+  50% {
+    color: #63f3e7;
+  }
+}
+
+/* General styles */
+.country-flags-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.country-flags-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.flags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.flag-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-align: center;
+}
+
+.flag-item img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.flag-item img:hover {
+  transform: scale(1.1);
+}
+
+.flag-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .flags-container {
+    gap: 10px;
+  }
+
+  .flag-item {
+    width: 70px;
+  }
+
+  .flag-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flag-item {
+    width: 60px;
+  }
+
+  .flag-item p {
+    font-size: 0.7rem;
+  }
+}
+/* Country Flag Section Styling */
+/* .country-flags-section {
+    padding: 40px 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+}
+
+.country-flags-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flags-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flag-item {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.flag-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.flag-item img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.flag-item img:hover {
+    transform: translateY(-5px);
+}
+
+.flag-item p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+} */
+
+/* General styles */
+.country-flags-section {
+  padding: 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+}
+
+.country-flags-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.flag-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.flag-item img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.flag-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.flag-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .flags-container {
+    gap: 10px;
+  }
+
+  .flag-item {
+    width: 70px;
+  }
+
+  .flag-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flag-item {
+    width: 60px;
+  }
+
+  .flag-item p {
+    font-size: 0.7rem;
+  }
+}
+
+/* About Us Section */
+.about-us-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.about-us-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us-section .lead {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.about-icon {
+  max-width: 150px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-icon:hover {
+  transform: scale(1.1);
+}
+
+.about-us-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-section h2 {
+      font-size: 2rem;
+  }
+
+  .about-us-section h3 {
+      font-size: 1.75rem;
+  }
+
+  .about-icon {
+      max-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-us-section h2 {
+      font-size: 1.75rem;
+  }
+
+  .about-us-section h3 {
+      font-size: 1.5rem;
+  }
+
+  .about-icon {
+      max-width: 100px;
+  }
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full page height */
+  background-color: #f4f4f4; /* Light gray background for the section */
+  padding-top: 50px;
+}
+
+/* Contact Heading */
+.contact-heading-container {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px; /* Restrict the form's width */
+  margin-top: 30px;
+}
+
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+form .btn {
+  background-color: #2575fc;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+form .btn:hover {
+  background-color: #6a11cb;
+}
+
+form .form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 30px;
+  }
+
+  .contact-form-container {
+    padding: 20px;
+  }
+}
+
+/* table */
+
+/* Responsive Styles */
+.table-responsive {
+  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+}
+
+.table th, 
+.table td {
+  white-space: nowrap; /* Prevent text from wrapping inside cells */
+}
+
+@media (max-width: 768px) {
+  .table th, 
+  .table td {
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 10px; /* Reduce padding for compact view */
+  }
+
+  .card-header {
+    font-size: 16px; /* Adjust header font size for mobile */
+    text-align: center; /* Center align the text for better layout */
+  }
+
+  .refresh-button {
+    display: block; /* Button takes its own line */
+    width: 100%; /* Full-width button on smaller screens */
+    margin-top: 10px; /* Add spacing below the header */
+    font-size: 14px; /* Slightly larger font for accessibility */
+  }
+}
+
+@media (max-width: 576px) {
+  .table th, 
+  .table td {
+    font-size: 10px; /* Further reduce font size for extra-small screens */
+  }
+
+  .refresh-button {
+    font-size: 12px; /* Make button text smaller for smaller screens */
+  }
+}
+
+
+/* Table Styling */
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+.table {
+  margin: 0;
+  border-collapse: collapse;
+  animation: fadeIn 1.5s;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table td {
+  background-color: white;
+  color: #555;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #ddd;
+}
+
+/* Refresh Button */
+.refresh-button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover {
+  background-color: #6a11cb;
+}
+
+/* Card Logo Styling */
+.card-logo {
+  width: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Gap between Tables */
+.card {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.table-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 10px 15px;
+}
+
+
+.card-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.fake-sections {
+  background: #000000;
+  color: white;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.fake-sections .credit-card-image {
+  width: 250px;
+  margin: 10px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Blog CSS */
+.blog-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.blog-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.blog-content-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.blog-content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-section h2 {
+      font-size: 2rem;
+  }
+
+  .card-title {
+      font-size: 1.25rem;
+  }
+
+  .card-text {
+      font-size: 0.9rem;
+  }
+
+  .blog-content h3 {
+      font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-section h2 {
+      font-size: 1.75rem;
+  }
+
+  .card {
+      margin-bottom: 20px;
+  }
+
+  .blog-content h3 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Privacy policy */
+
+/* Privacy Policy Section */
+.privacy-policy-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.privacy-policy-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.privacy-policy-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-section ul {
+  margin-bottom: 20px;
+}
+
+.privacy-policy-section ul li {
+  margin-bottom: 10px;
+}
+
+.privacy-policy-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.privacy-policy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-section h1 {
+      font-size: 2rem;
+  }
+
+  .privacy-policy-section h2 {
+      font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .privacy-policy-section h1 {
+      font-size: 1.75rem;
+  }
+
+  .privacy-policy-section h2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Terms Of Service */
+
+/* Terms of Service Section */
+.terms-of-service-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.terms-of-service-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.terms-of-service-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section ul {
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section ul li {
+  margin-bottom: 10px;
+}
+
+.terms-of-service-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms-of-service-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-of-service-section h1 {
+      font-size: 2rem;
+  }
+
+  .terms-of-service-section h2 {
+      font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .terms-of-service-section h1 {
+      font-size: 1.75rem;
+  }
+
+  .terms-of-service-section h2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* * Terms & Conditions Section */ */
+.terms-conditions-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.terms-conditions-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.terms-conditions-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.terms-conditions-section p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.terms-conditions-section ul {
+    margin-bottom: 20px;
+}
+
+.terms-conditions-section ul li {
+    margin-bottom: 10px;
+}
+
+.terms-conditions-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms-conditions-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-conditions-section h1 {
+        font-size: 2rem;
+    }
+
+    .terms-conditions-section h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .terms-conditions-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .terms-conditions-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Terms of Service Section */
+.terms-of-service-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.terms-of-service-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.terms-of-service-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section ul {
+  margin-bottom: 20px;
+}
+
+.terms-of-service-section ul li {
+  margin-bottom: 10px;
+}
+
+.terms-of-service-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms-of-service-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-of-service-section h1 {
+      font-size: 2rem;
+  }
+
+  .terms-of-service-section h2 {
+      font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .terms-of-service-section h1 {
+      font-size: 1.75rem;
+  }
+
+  .terms-of-service-section h2 {
+      font-size: 1.5rem;
+  }
+}
