@@ -2,7 +2,7 @@
 // This script checks if data exists for a country and generates it if needed
 
 // Base URL for the backend
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://metaadata.com";  // Update with your backend URL
 
 // Function to check if data exists for a country
 async function checkCountryData(countryID) {

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to fetch country details from the backend
 async function fetchEducationDetails(countryID) {
-    const BASE_URL = "http://localhost:5000";  // Your backend URL
+const BASE_URL = "https://metaadata.com";  // Update with your backend URL
     try {
         // Fetch the country details from the server
         const response = await axios.get(`${BASE_URL}/education/showed/${countryID}`);

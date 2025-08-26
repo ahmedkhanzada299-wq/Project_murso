@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const fs = require("fs");
+const https = require("https");
 const { initializeCountries } = require("./Routes/initializeCountries.js");
 
 const app = express();
@@ -27,9 +29,22 @@ app.use("/vehicle", require("./Routes/vehicle.js"));
 app.use("/contact", require("./Routes/contact.js"));
 app.use("/generator", require("./Routes/dataGenerator.js"));
 
-// Start Server
+// Load SSL certs
+const sslOptions = {
+  key: fs.readFileSync("/etc/letsencrypt/live/metaadata.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/metaadata.com/fullchain.pem"),
+};
+
+// Start HTTPS server
 initializeCountries().then(() => {
-  app.listen(5000, () => {
-    console.log("✅ Server is running on http://localhost:5000");
+  https.createServer(sslOptions, app).listen(443, () => {
+    console.log("✅ HTTPS Server running at https://metaadata.com");
   });
+
+  // Optional: Redirect HTTP to HTTPS
+  const http = require("http");
+  http.createServer((req, res) => {
+    res.writeHead(301, { Location: "https://" + req.headers.host + req.url });
+    res.end();
+  }).listen(80);
 });

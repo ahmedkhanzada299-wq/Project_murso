@@ -7,15 +7,25 @@ body {
 
 /* Gradient background for the main container */
 .gradient-bg {
-  background-color: #000000;
+
+    background: linear-gradient(135deg, #b988ed, #93b2e9);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Navbar styling */
-.navbar-brand .logo {
+/* .navbar-brand .logo {
   width: 40px;
   height: auto;
+} */
+
+.logo {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
 }
+
+
 
 .nav-link {
   color: #fff;
@@ -37,9 +47,18 @@ body {
   }
 }
 
+.navbar-toggler {
+  border-color: white; /* Optional: makes the button border white */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
 /* Hero section styling */
 .hero-section {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #e98282, #2575fc);
   color: white;
   height: 100vh;
   display: flex;
@@ -295,7 +314,7 @@ body {
 /* General styles */
 .country-flags-section {
   padding: 20px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #e98282, #2575fc);
   color: #fff;
 }
 
