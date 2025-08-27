@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://metaadata.com/sitemap.xml
