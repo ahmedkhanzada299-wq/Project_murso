@@ -39,7 +39,7 @@ body {
 /* Navbar - Adjust for smaller screens */
 @media (max-width: 768px) {
   .navbar-brand .logo {
-    width: 30px;
+    width: 120px;
   }
 
   .nav-link {
@@ -257,59 +257,6 @@ body {
     font-size: 0.7rem;
   }
 }
-/* Country Flag Section Styling */
-/* .country-flags-section {
-    padding: 40px 20px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #fff;
-}
-
-.country-flags-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-.flags-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    justify-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.flag-item {
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.flag-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.flag-item img {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.flag-item img:hover {
-    transform: translateY(-5px);
-}
-
-.flag-item p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #fff;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-} */
 
 /* General styles */
 .country-flags-section {
@@ -572,45 +519,133 @@ form .form-group label {
 
 /* Responsive Styles */
 .table-responsive {
-  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -15px;
+  padding: 0 15px;
 }
 
 .table th, 
 .table td {
-  white-space: nowrap; /* Prevent text from wrapping inside cells */
+  white-space: nowrap;
 }
 
+/* Mobile-first responsive design */
 @media (max-width: 768px) {
+  .table-responsive {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table {
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+  
   .table th, 
   .table td {
-    font-size: 12px; /* Adjust font size for smaller screens */
-    padding: 10px; /* Reduce padding for compact view */
+    font-size: 12px;
+    padding: 10px;
+    white-space: normal;
+    max-width: 150px;
+  }
+  
+  /* Stack table rows for mobile */
+  .table.table-mobile-stack tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+  }
+  
+  .table.table-mobile-stack th,
+  .table.table-mobile-stack td {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .table.table-mobile-stack th:last-child,
+  .table.table-mobile-stack td:last-child {
+    border-bottom: none;
+  }
+  
+  .table.table-mobile-stack th {
+    background-color: #f8f9fa;
+    font-weight: 600;
   }
 
   .card-header {
-    font-size: 16px; /* Adjust header font size for mobile */
-    text-align: center; /* Center align the text for better layout */
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 15px;
   }
 
   .refresh-button {
-    display: block; /* Button takes its own line */
-    width: 100%; /* Full-width button on smaller screens */
-    margin-top: 10px; /* Add spacing below the header */
-    font-size: 14px; /* Slightly larger font for accessibility */
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .copy-icon {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    right: 8px;
+  }
+  
+  .table td {
+    padding-right: 35px !important;
+  }
+  
+  .copy-notification {
+    padding: 10px 16px;
+    min-width: 180px;
+    font-size: 14px;
+    bottom: 15px;
+    right: 15px;
   }
 }
 
 @media (max-width: 576px) {
   .table th, 
   .table td {
-    font-size: 10px; /* Further reduce font size for extra-small screens */
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+  
+  .table.table-mobile-stack th,
+  .table.table-mobile-stack td {
+    padding: 10px 12px;
   }
 
   .refresh-button {
-    font-size: 12px; /* Make button text smaller for smaller screens */
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .copy-icon {
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .table td {
+    padding-right: 32px !important;
+  }
+  
+  .copy-notification {
+    font-size: 13px;
+    padding: 8px 14px;
+    min-width: 160px;
   }
 }
-
 
 /* Table Styling */
 .card-header {
@@ -627,6 +662,7 @@ form .form-group label {
   animation: fadeIn 1.5s;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02) inset;
+  min-width: 500px;
 }
 
 .table th,
@@ -651,6 +687,7 @@ form .form-group label {
   background-color: white;
   color: #555;
   transition: all 0.2s ease;
+  padding-right: 40px !important;
 }
 
 /* Special styling for table cells with copy buttons */
@@ -663,6 +700,8 @@ form .form-group label {
 .table td img.card-logo {
   vertical-align: middle;
   display: inline-block;
+  max-width: 60px;
+  height: auto;
 }
 
 .table-hover tbody tr:hover {
@@ -797,33 +836,6 @@ form .form-group label {
   border-color: rgba(40, 167, 69, 0.2) !important;
 }
 
-/* Make cells with copy icons have enough space */
-.table td {
-  padding-right: 40px !important;
-  position: relative;
-}
-
-/* Responsive styling for copy icon */
-@media (max-width: 768px) {
-  .copy-icon {
-    font-size: 14px;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .table td {
-    padding-right: 35px !important;
-  }
-  
-  .copy-notification {
-    padding: 10px 20px;
-    min-width: 180px;
-    font-size: 14px;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
 /* Refresh Button */
 .refresh-button {
   background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
@@ -841,6 +853,13 @@ form .form-group label {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
 }
+
+/* Animation for table appearance */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 /* Card Logo Styling */
 .card-logo {
