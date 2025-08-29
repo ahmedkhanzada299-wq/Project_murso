@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "../Frontend")));
 
 // Serve HTML
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/Home_page.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 
 // Register routes
