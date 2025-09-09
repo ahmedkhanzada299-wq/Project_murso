@@ -14,9 +14,14 @@ app.use(cors());
 // Serve Frontend folder as static
 app.use(express.static(path.join(__dirname, "../Frontend")));
 
-// Serve HTML
+// ✅ Redirect /index.html to /
+app.get("/index.html", (req, res) => {
+  res.redirect(301, "/");
+});
+
+// ✅ Serve root with index.html file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/Home_page.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 
 // Register routes
@@ -35,16 +40,9 @@ const sslOptions = {
   cert: fs.readFileSync("/etc/letsencrypt/live/metaadata.com/fullchain.pem"),
 };
 
-// Start HTTPS server
+// ✅ Only run HTTPS server
 initializeCountries().then(() => {
   https.createServer(sslOptions, app).listen(443, () => {
     console.log("✅ HTTPS Server running at https://metaadata.com");
   });
-
-  // Optional: Redirect HTTP to HTTPS
-  const http = require("http");
-  http.createServer((req, res) => {
-    res.writeHead(301, { Location: "https://" + req.headers.host + req.url });
-    res.end();
-  }).listen(80);
 });
