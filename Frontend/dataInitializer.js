@@ -8,7 +8,7 @@ const BASE_URL = "https://metaadata.com";  // Update with your backend URL
 async function checkCountryData(countryID) {
   try {
     console.log(`Checking data for country ID: ${countryID}`);
-    const response = await axios.get(`${BASE_URL}/generator/check/${countryID}`);
+    const response = await axios.get(`${BASE_URL}/api/generator/check/${countryID}`);
     return response.data;
   } catch (error) {
     console.error(`Error checking data for country ID ${countryID}:`, error);
@@ -24,7 +24,7 @@ async function generateCountryData(countryID, count = 10) {
     // Create loading indicator
     showLoadingIndicator(`Generating data for this country...`);
     
-    const response = await axios.post(`${BASE_URL}/generator/generate/${countryID}`, { count });
+    const response = await axios.post(`${BASE_URL}/api/generator/generate/${countryID}`, { count });
     
     // Remove loading indicator
     hideLoadingIndicator();

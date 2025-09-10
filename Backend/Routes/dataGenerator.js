@@ -1071,7 +1071,7 @@ function getPagination(req) {
 }
 
 // Fetch personal details by country
-router.get('/personal/:countryID', async (req, res) => {
+router.get('/api/personal/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   
@@ -1100,7 +1100,7 @@ router.get('/personal/:countryID', async (req, res) => {
 });
 
 // Fetch financial details by country
-router.get('/financial/:countryID', async (req, res) => {
+router.get('/api/financial/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   
@@ -1129,7 +1129,7 @@ router.get('/financial/:countryID', async (req, res) => {
 });
 
 // Fetch internet details by country
-router.get('/internet/:countryID', async (req, res) => {
+router.get('/api/internet/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   
@@ -1158,7 +1158,7 @@ router.get('/internet/:countryID', async (req, res) => {
 });
 
 // Fetch education details by country
-router.get('/education/:countryID', async (req, res) => {
+router.get('/api/education/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   
@@ -1187,7 +1187,7 @@ router.get('/education/:countryID', async (req, res) => {
 });
 
 // Fetch employment details by country
-router.get('/employment/:countryID', async (req, res) => {
+router.get('/api/employment/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   
@@ -1216,7 +1216,7 @@ router.get('/employment/:countryID', async (req, res) => {
 });
 
 // Fetch vehicle details by country
-router.get('/vehicle/:countryID', async (req, res) => {
+router.get('/api/vehicle/:countryID', async (req, res) => {
   const { countryID } = req.params;
   const { skip, take } = getPagination(req);
   

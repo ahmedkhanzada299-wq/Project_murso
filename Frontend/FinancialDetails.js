@@ -34,7 +34,7 @@ async function fetchFinancialDetails(countryID) {
 const BASE_URL = "https://metaadata.com";  // Update with your backend URL
     try {
         // Fetch the country details from the server
-        const response = await axios.get(`${BASE_URL}/financial/showf/${countryID}`);
+        const response = await axios.get(`${BASE_URL}/api/financial/showf/${countryID}`);
         const countryDetails = response.data;
         console.log(countryDetails);
         if (countryDetails && countryDetails.country && countryDetails.country.FinancialDetails && countryDetails.country.FinancialDetails.length > 0) {

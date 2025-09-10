@@ -34,7 +34,7 @@ async function fetchInternetDetails(countryID) {
 const BASE_URL = "https://metaadata.com";  // Update with your backend URL
     try {
         // Fetch the country details from the server
-        const response = await axios.get(`${BASE_URL}/internet/showi/${countryID}`);
+        const response = await axios.get(`${BASE_URL}/api/internet/showi/${countryID}`);
         const countryDetails = response.data;
         console.log(countryDetails);
         if (countryDetails && countryDetails.country && countryDetails.country.InternetDetails && countryDetails.country.InternetDetails.length > 0) {

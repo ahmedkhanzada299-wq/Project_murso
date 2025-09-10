@@ -35,7 +35,7 @@ const BASE_URL = "https://metaadata.com";  // Update with your backend URL
 
     try {
         // Fetch the country details from the server
-        const response = await axios.get(`${BASE_URL}/personal/showp/${countryID}`);
+        const response = await axios.get(`${BASE_URL}/api/personal/showp/${countryID}`);
         const countryDetails = response.data;
         console.log(countryDetails);
         if (countryDetails && countryDetails.country && countryDetails.country.PersonalDetails && countryDetails.country.PersonalDetails.length > 0) {

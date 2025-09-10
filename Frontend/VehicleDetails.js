@@ -34,7 +34,7 @@ async function fetchVehicleDetails(countryID) {
 const BASE_URL = "https://metaadata.com";  // Update with your backend URL
     try {
         // Fetch the country details from the server
-        const response = await axios.get(`${BASE_URL}/vehicle/showv/${countryID}`);
+        const response = await axios.get(`${BASE_URL}/api/vehicle/showv/${countryID}`);
         const countryDetails = response.data;
         console.log(countryDetails);
         if (countryDetails && countryDetails.country && countryDetails.country.VehicleDetails && countryDetails.country.VehicleDetails.length > 0) {
