@@ -9,15 +9,15 @@ app.use(express.json());
 app.use(cors());
 
 // Serve Frontend folder as static
-app.use(express.static(path.join(__dirname, "../Frontend")));
+// app.use(express.static(path.join(__dirname, "../Frontend")));
 
-app.get("/index.html", (req, res) => {
-  res.redirect(301, "/");
-});
+// app.get("/index.html", (req, res) => {
+//   res.redirect(301, "/");
+// });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
+// });
 
 
 app.use("/api/personal", require("./Routes/personal.js"));
