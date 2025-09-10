@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to fetch country details from the backend
+// git issue 
 async function fetchFinancialDetails(countryID) {
 const BASE_URL = "https://metaadata.com";  // Update with your backend URL
     try {
